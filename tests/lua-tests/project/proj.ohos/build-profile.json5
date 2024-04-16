@@ -1,0 +1,46 @@
+{
+  "app": {
+    "products": [
+      {
+        "name": "default",
+        "signingConfig": "default",
+        "compileSdkVersion": "4.1.0(11)",
+        "compatibleSdkVersion": "4.1.0(11)",
+        "targetSdkVersion": "4.1.0(11)",
+        "runtimeOS": "HarmonyOS"
+      }
+    ],
+    "signingConfigs": [
+      {
+        "name": "default",
+        "material": {
+          "certpath": "C:/Users/k00514575/.ohos/config/openharmony/default_proj.ohos_RHTOunNPiAdaLNa2Yzhl1wBteok7tydT8xQ8493_j3w=.cer",
+          "storePassword": "0000001BB56EB4CAB4715BB7F676B4A731C998AC1778ACA49EA09C4A33BC419C053A02FE49B5C7181D8D1D",
+          "keyAlias": "debugKey",
+          "keyPassword": "0000001BFF1CCF0FA1B51B65FC2956836CAAE34AF28961F4221C3A1B29EF9184560C5D052250DB3311B9EF",
+          "profile": "C:/Users/k00514575/.ohos/config/openharmony/default_proj.ohos_RHTOunNPiAdaLNa2Yzhl1wBteok7tydT8xQ8493_j3w=.p7b",
+          "signAlg": "SHA256withECDSA",
+          "storeFile": "C:/Users/k00514575/.ohos/config/openharmony/default_proj.ohos_RHTOunNPiAdaLNa2Yzhl1wBteok7tydT8xQ8493_j3w=.p12"
+        }
+      }
+    ]
+  },
+  "modules": [
+    {
+      "name": "entry",
+      "srcPath": "./entry",
+      "targets": [
+        {
+          "name": "default",
+          "applyToProducts": [
+            "default"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "libSysCapabilities",
+      "srcPath": "./libSysCapabilities"
+    }
+  ]
+}
