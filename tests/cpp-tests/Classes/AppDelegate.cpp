@@ -29,7 +29,10 @@
 #include "controller.h"
 // #include "editor-support/cocostudio/CocoStudio.h"
 #include "extensions/cocos-ext.h"
-
+#if (CC_TARGET_PLATFORM == CC_PLATFORM_OHOS)
+#include "audio/include/AudioEngine.h"
+#include "editor-support/cocostudio/CocoStudio.h"
+#endif
 USING_NS_CC;
 
 AppDelegate::AppDelegate()
@@ -73,14 +76,14 @@ bool AppDelegate::applicationDidFinishLaunching()
     director->setAnimationInterval(1.0f / 60);
 
     auto screenSize = glview->getFrameSize();
-    auto designSize = Size(480, 320);
+    auto designSize = Size(1024/2, 2112/2);
 
     auto fileUtils = FileUtils::getInstance();
     std::vector<std::string> searchPaths;
     
     if (screenSize.height > 320)
     {
-        auto resourceSize = Size(960, 640);
+        auto resourceSize = Size(1024, 2112);
         searchPaths.push_back("hd");
         searchPaths.push_back("ccs-res/hd");
         searchPaths.push_back("ccs-res");
@@ -114,10 +117,13 @@ void AppDelegate::applicationDidEnterBackground()
 {
     if (_testController)
     {
-//        _testController->onEnterBackground();
+	#if (CC_TARGET_PLATFORM == CC_PLATFORM_OHOS)
+        _testController->onEnterBackground();
+	#endif
     }
     
     Director::getInstance()->stopAnimation();
+    _testController->onEnterBackground();
 }
 
 // this function will be called when the app is active again
@@ -125,8 +131,14 @@ void AppDelegate::applicationWillEnterForeground()
 {
     if (_testController)
     {
-//        _testController->onEnterForeground();
+		#if (CC_TARGET_PLATFORM == CC_PLATFORM_OHOS)
+          _testController->onEnterForeground();
+		#endif
     }
     
     Director::getInstance()->startAnimation();
+    // resume audioEngine, otherwise the opensl audioPlayer will always be suspended.
+	#if (CC_TARGET_PLATFORM == CC_PLATFORM_OHOS)
+      _testController->onEnterForeground();
+    #endif
 }

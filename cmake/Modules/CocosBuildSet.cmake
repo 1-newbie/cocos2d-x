@@ -29,7 +29,7 @@ message(STATUS "PYTHON_PATH:"  ${PYTHON_COMMAND})
 message(STATUS "COCOS_COMMAND_PATH:"  ${COCOS_COMMAND})
 message(STATUS "HOST_SYSTEM:" ${CMAKE_HOST_SYSTEM_NAME})
 # the default behavior of build module
-option(BUILD_LUA_LIBS "Build lua libraries" OFF)
+option(BUILD_LUA_LIBS "Build lua libraries" ON)
 
 # include helper functions
 include(CocosBuildHelpers)
