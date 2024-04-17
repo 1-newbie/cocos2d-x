@@ -1,11 +1,8 @@
 #ifndef _GL_CORE_
 #define _GL_CORE_
 
-#include <GLES3/gl3.h>
 #include <EGL/egl.h>
 #include <EGL/eglext.h>
-
-#include <string>
 
 class EGLCore {
 public:

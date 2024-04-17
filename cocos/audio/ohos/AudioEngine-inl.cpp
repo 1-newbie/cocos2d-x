@@ -33,7 +33,7 @@
 #include <thread>
 
 #include "audio/include/AudioEngine.h"
-#include "platform/ohos/CCFileUtils-ohos.h"
+#include "platform/ohos/napi/modules/RawFileUtils.h"
 #include "AudioDecoder.h"
 #include "AudioDecoderProvider.h"
 #include "AudioPlayerProvider.h"
@@ -87,10 +87,19 @@ static CallerThreadUtils gCallerThreadUtils;
 static int fdGetter(const std::string &url, off_t *start, off_t *length) {
     int fd = -1;
 
-    RawFileDescriptor descriptor;
-    FileUtilsOhos *utils = dynamic_cast<FileUtilsOhos*>(FileUtils::getInstance());
-    utils->getRawFileDescriptor(url, descriptor);
-    fd = descriptor.fd;
+    if (!url.empty()) {
+        std::string fullPath = FileUtils::getInstance()->fullPathForFilename(url);
+
+        RawFile *fp = RawFileUtils::GetInstance().Open(fullPath.c_str()); // fopen(strFilePath.c_str(), "r");
+        if (fp) {
+            RawFileDescriptor descriptor;
+            bool result = RawFileUtils::GetInstance().GetRawFileDescriptor(fp, descriptor);
+            RawFileUtils::GetInstance().Close(fp);
+            if (result) {
+                fd = descriptor.fd;
+            }
+        }
+    }
 
     if (fd <= 0) {
         ALOGE("Failed to open file descriptor for '%{public}s'", url.c_str());

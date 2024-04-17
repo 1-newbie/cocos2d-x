@@ -14,13 +14,13 @@
       {
         "name": "default",
         "material": {
-          "certpath": "C:/Users/k00514575/.ohos/config/openharmony/default_proj.ohos_RHTOunNPiAdaLNa2Yzhl1wBteok7tydT8xQ8493_j3w=.cer",
-          "storePassword": "0000001BB56EB4CAB4715BB7F676B4A731C998AC1778ACA49EA09C4A33BC419C053A02FE49B5C7181D8D1D",
+          "certpath": "C:/Users/cocos2dx/.ohos/config/openharmony/default_proj.ohos_u4v9dD8RIzrIFPK2SOtsLREqRT3R8kXJF36zZaKt4b0=.cer",
+          "storePassword": "0000001B90BA22EEDB14975ABB9047D1E99D5C1EE46C23F12DF4A545858D0F3C69A1CE1410D638992E975B",
           "keyAlias": "debugKey",
-          "keyPassword": "0000001BFF1CCF0FA1B51B65FC2956836CAAE34AF28961F4221C3A1B29EF9184560C5D052250DB3311B9EF",
-          "profile": "C:/Users/k00514575/.ohos/config/openharmony/default_proj.ohos_RHTOunNPiAdaLNa2Yzhl1wBteok7tydT8xQ8493_j3w=.p7b",
+          "keyPassword": "0000001B7E9FE00D7759575B1857D273A58AB1AE924B6A0C878DBE5B4E744915DB7D1AC0A8D31364F5FAE4",
+          "profile": "C:/Users/cocos2dx/.ohos/config/openharmony/default_proj.ohos_u4v9dD8RIzrIFPK2SOtsLREqRT3R8kXJF36zZaKt4b0=.p7b",
           "signAlg": "SHA256withECDSA",
-          "storeFile": "C:/Users/k00514575/.ohos/config/openharmony/default_proj.ohos_RHTOunNPiAdaLNa2Yzhl1wBteok7tydT8xQ8493_j3w=.p12"
+          "storeFile": "C:/Users/cocos2dx/.ohos/config/openharmony/default_proj.ohos_u4v9dD8RIzrIFPK2SOtsLREqRT3R8kXJF36zZaKt4b0=.p12"
         }
       }
     ]

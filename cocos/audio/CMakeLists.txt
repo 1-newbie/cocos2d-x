@@ -147,7 +147,6 @@ elseif(OHOS)
         audio/ohos/AudioEngine-inl.h
         audio/ohos/IVolumeProvider.h
     	audio/ohos/Macros.h
-    	audio/ohos/Value.h
         )
 
     set(COCOS_AUDIO_PLATFORM_SRC
@@ -174,7 +173,6 @@ elseif(OHOS)
         audio/ohos/tinysndfile.cpp
         audio/ohos/Track.cpp
         audio/ohos/audio_utils/RefCounted.cpp
-        audio/ohos/audio_utils/Value.cpp
         audio/ohos/audio_utils/minifloat.cpp
         audio/ohos/audio_utils/primitives.cpp
         audio/ohos/utils/Utils.cpp

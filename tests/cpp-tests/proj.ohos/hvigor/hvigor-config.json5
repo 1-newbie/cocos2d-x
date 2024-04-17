@@ -1,6 +1,8 @@
 {
-  "hvigorVersion": "4.1.2",
+  // 由于hvigor 相关版本在远程仓中不存在，目前只能使用离线版本
+  // 请使用下载deveco时压缩包里，对应的hvigor版本，避免意外错误
+  "hvigorVersion": "file:../dependencies/hvigor-4.2.0.tgz",
   "dependencies": {
-    "@ohos/hvigor-ohos-plugin": "4.1.2"
+    "@ohos/hvigor-ohos-plugin":"file:../dependencies/hvigor-ohos-plugin-4.2.0.tgz",
   }
 }

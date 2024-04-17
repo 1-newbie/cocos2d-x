@@ -29,15 +29,6 @@ typedef char GLchar;
 #define GL_BGRA  0x80E1
 #endif
 
-extern PFNGLGENVERTEXARRAYSOESPROC glGenVertexArraysOESEXT;
-extern PFNGLBINDVERTEXARRAYOESPROC glBindVertexArrayOESEXT;
-extern PFNGLDELETEVERTEXARRAYSOESPROC glDeleteVertexArraysOESEXT;
-
-#define glGenVertexArraysOES glGenVertexArraysOESEXT
-#define glBindVertexArrayOES glBindVertexArrayOESEXT
-#define glDeleteVertexArraysOES glDeleteVertexArraysOESEXT
-
-
 #endif // CC_TARGET_PLATFORM == CC_PLATFORM_OHOS
 
 #endif // __CCGL_OHOS_H__
