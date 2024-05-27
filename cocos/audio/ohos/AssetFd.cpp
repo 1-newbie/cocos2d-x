@@ -42,4 +42,4 @@ AssetFd::~AssetFd() {
     }
 };
 
-} // namespace CocosDenshion
+} // namespace cocos2d
