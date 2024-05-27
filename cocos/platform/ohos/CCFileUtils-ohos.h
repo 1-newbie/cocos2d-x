@@ -34,8 +34,6 @@ public:
      */
     virtual ~FileUtilsOhos();
 
-    static void setassetmanager(NativeResourceManager* a);
-    static NativeResourceManager* getAssetManager() { return nativeResourceManager_; }
     static ZipFile* getObbFile() { return obbfile; }
     FileUtils::Status getRawFileDescriptor(const std::string &filename, RawFileDescriptor &descriptor);
 
@@ -54,7 +52,6 @@ private:
     virtual bool isFileExistInternal(const std::string& strFilePath) const override;
     virtual bool isDirectoryExistInternal(const std::string& dirPath) const override;
 
-    static NativeResourceManager* nativeResourceManager_;
     static ZipFile* obbfile;
 };
 

@@ -14,16 +14,7 @@ using namespace std;
 #define DECLARE_GUARD std::lock_guard<std::recursive_mutex> mutexGuard(_mutex)
 
 NS_CC_BEGIN
-NativeResourceManager* FileUtilsOhos::nativeResourceManager_ = nullptr;
 string FileUtilsOhos::ohWritablePath;
-
-void FileUtilsOhos::setassetmanager(NativeResourceManager* a) {
-    if (nullptr == a) {
-        return;
-    }
-
-    cocos2d::FileUtilsOhos::nativeResourceManager_ = a;
-}
 
 FileUtils* FileUtils::getInstance() {
     if (s_sharedFileUtils == nullptr) {
